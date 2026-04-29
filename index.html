@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KODEHODE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./img/Favicon-slimo-16x16.png" type="image/x-icon">
+</head>
+<body>
+
+  <div class="gameboy">
+
+    <div class="header">
+      <div class="title">K<span class="secret" onclick="activateGoblinMode()">o</span>dehode</div>
+      <button class="manual-btn" onclick="toggleManual()">📖 MANUAL</button>
+      <div>🇳🇴</div>
+    </div>
+
+    <div class="main-cartridge">
+      <h1>INSERT CARTRIDGE</h1>
+      <p>Self-taught Pixel Artist from Norway</p>
+      <p>Bouncy slimes • Goblins • Anything Retro or new</p>
+      <a href="#projects" class="big-btn">PRESS START</a>
+    </div>
+
+    <div class="projects" id="projects">
+      <h2 class="section-title">MY CARTRIDGES</h2>
+      <div class="cartridge-grid">
+        <div class="cartridge">
+          <img src="./img/OG Bouncy Slime.gif" alt="Slimo">
+          <div class="cartridge-label">SLIMO v1.0</div>
+        </div>
+        <div class="cartridge">
+          <img src="./img/The Gilded Relapse-onepic.png" alt="Portrait">
+          <div class="cartridge-label">FIRST PORTRAIT</div>
+        </div>
+        <div class="cartridge">
+          <img src="./img/Gobbo.png" alt="Goblin">
+          <div class="cartridge-label">GOBLIN</div>
+        </div>
+        <div class="cartridge">
+          <img src="./img/Mini asset set.png" alt="Assets">
+          <div class="cartridge-label">MINI ASSET PACK</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MANUAL POPUP -->
+  <div class="manual-overlay" id="manualOverlay" onclick="if(event.target === this) toggleManual()">
+    <div class="manual-modal">
+      
+      <!-- Click outside hint -->
+      <div class="exit-hint">
+        Click outside this box to exit
+      </div>
+
+      <div class="manual-tabs">
+        <button onclick="showTab(0)" class="tab-btn active">ABOUT ME</button>
+        <button onclick="showTab(1)" class="tab-btn">CONTACT</button>
+      </div>
+
+      <div class="manual-tab" id="tab0">
+        <h2>About Me</h2>
+            <p>I'm Jimmy, a self-taught pixel artist and web developer based in Norway.</p>
+            <p>With a passion for retro aesthetics, I create pixel art, sprite animations, and game assets. My work is made in Aseprite and VS Code, emphasizing clean design, smooth animation, and nostalgic charm.</p>
+            <p>I'm always working on new projects and improving my skills through hands-on practice.</p>
+        </div>
+
+      <div class="manual-tab" id="tab1" style="display:none;">
+        <h2>Contact</h2>
+        <p>Du kan nå meg her:</p>
+        <ul>
+          <li><strong>X / Twitter:</strong> <a href="https://x.com/ItsUstable">@ItsUstable</a></li>
+          <li><strong>Email:</strong> <a href="mailto:jimmy.kodehode@gmail.com">jimmy.kodehode@gmail.com</a></li>
+          <li><strong>Discord:</strong> Jimbobo30</li>
+        </ul>
+        <p>Har du et prosjekt eller bare vil si hei — send melding!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Made with pure chaos • Jimmy "Kodehode" • 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
